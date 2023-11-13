@@ -6,4 +6,8 @@ class RecipesController < ApplicationController
     @recipes = @user.recipes.order(id: :asc)
     # @recipes = @recipes.paginate(page: params[:page], per_page: 5)
   end
+
+  def show
+    @recipe = Recipe.find(params[:id])
+  end
 end
