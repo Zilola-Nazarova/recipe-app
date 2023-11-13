@@ -31,8 +31,24 @@ class RecipesController < ApplicationController
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy!
-    flash[:success] = 'recipe was deleted successfully!'
+    flash[:success] = 'Recipe was deleted successfully!'
     redirect_to recipes_url
+  end
+
+  def update
+    @recipe = Recipe.find(params[:id])
+    if @recipe.public
+      @recipe.update!(public: false)
+      flash[:notice] = 'Recipe status changed to private'
+    else
+      @recipe.update!(public: true)
+      flash[:notice] = 'Recipe status changed to public'
+    end
+    redirect_to recipe_path
+  end
+
+  def public_recipes
+    @recipes = Recipe.where(public: true).order(id: :asc)
   end
 
   private
