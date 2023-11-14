@@ -17,7 +17,7 @@
           <%= f.submit "REMOVE" %>
         <% end %>
       <% end %>
-      <h2><%= recipe.description %></h2>
+      <h2><%= truncate(recipe.description, length: 100, omission: '...') %></h2>
     </li>
   <% end %>
 </ul>
