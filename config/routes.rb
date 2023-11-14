@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :recipes, only: [:index, :new, :create, :show, :update, :destroy] do
     resources :recipe_foods
   end
+  get '/public_recipes', to: 'recipes#public_recipes', as: 'public_recipes'
   # resources :users, only: [:show]
   # Defines the root path route ("/")
   # root "posts#index"
