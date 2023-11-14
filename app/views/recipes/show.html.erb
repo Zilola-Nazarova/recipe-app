@@ -20,7 +20,7 @@
 
 <% if current_user == @recipe.user %>
   <div id="recipe_actions">
-    <%# <%= link_to "Generate shopping list", general_shopping_list_path(@recipe.id) %>
+    <%= link_to "Generate shopping list", shopping_lists_path %>
     <%= link_to "Add ingredient", new_recipe_recipe_food_path(@recipe.id) %>
   </div>
 <% end %>
