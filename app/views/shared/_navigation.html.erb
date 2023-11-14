@@ -1,25 +1,17 @@
-<nav>
-  <div>
+<nav class="navbar">
     <a href="#">Recipe App</a>
-    <div >
-      <div>
+      <div class="nav-list">
         <% if user_signed_in? %>
           <%= link_to "Foods", foods_path %>
           <%= link_to "Recipes", recipes_path %>
           <%= link_to "Public Recipes", '/public_recipes' %>
-          <%= link_to "Shopping List", '/shopping_list' %>
-        <% end %>
-      </div>
-      <div>
-        <% if user_signed_in? %>
-          <p>Welcome <%= current_user.name.capitalize %>!</p>
+          <%= link_to "Shopping List", '/shopping_lists' %>
           <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
-        <% end %>
-        <% unless user_signed_in? %>
-          <%= link_to "Sign In", new_user_session_path %>
-          <%= link_to "Sign Up", new_user_registration_path %>
+        <% else %>
+           <% unless user_signed_in? %>
+           <%= link_to "Sign In", new_user_session_path %>
+           <%= link_to "Sign Up", new_user_registration_path %>
+           <% end %>
         <% end %>
       </div>
-    </div>
-  </div>
 </nav>
