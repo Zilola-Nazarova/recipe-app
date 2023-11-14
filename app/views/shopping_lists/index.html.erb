@@ -18,7 +18,7 @@
         <tr>
           <td><%= food_name %></td>
           <td><%= @missing_numbers[food_name] %> <%= ingredient.food.measurement_unit %> </td>
-          <td><%= number_to_currency(ingredient.food.price) %></td>
+          <td><%= number_to_currency(ingredient.food.price * @missing_numbers[food_name]) %></td>
         </tr>
       <% end %>
     <% end %>
