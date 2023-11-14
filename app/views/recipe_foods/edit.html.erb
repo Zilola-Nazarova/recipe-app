@@ -1,0 +1,12 @@
+<h1>Add new recipe food</h1>
+
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: name %>
+<% end -%>
+
+<%= form_with url: recipe_recipe_food_path, method: :patch, model: @recipe_food do |form| %>
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity, min: 1,  required: true %>
+    <%= form.collection_select :food_id, current_user.foods, :id, :name, { include_blank: false } %> 
+    <%= form.submit "Update ingredient" %>
+<% end %>

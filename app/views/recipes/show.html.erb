@@ -50,3 +50,7 @@
     </tbody>
   </table>
 </div>
+
+<% if flash[:success].present? %>
+  <p class='flash-notice'><%= flash[:success] %></p>
+<% end %>
