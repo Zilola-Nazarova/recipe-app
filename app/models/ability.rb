@@ -2,7 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :read, :all # start by defining rules for all users, also not logged ones
+    can :read, Recipe, public: true # start by defining rules for all users, also not logged ones
     return unless user.present?
 
     can :manage, Recipe, user_id: user.id
