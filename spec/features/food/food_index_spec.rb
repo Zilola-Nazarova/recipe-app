@@ -12,9 +12,9 @@ RSpec.feature 'Food List', type: :feature do
     Food.create(name: 'Apple', measurement_unit: 'kg', price: '10.99', user: @user)
     visit foods_path
     expect(page).to have_link('Add Food', href: new_food_path)
-    expect(page).to have_selector('tbody tr td', text: name)
-    expect(page).to have_selector('tbody tr td', text: measurement_unit)
-    expect(page).to have_selector('tbody tr td', text: price)
+    expect(page).to have_selector('tbody tr td', text: 'Apple')
+    expect(page).to have_selector('tbody tr td', text: 'kg')
+    expect(page).to have_selector('tbody tr td', text: '10.99')
     expect(page).to have_button('Delete')
   end
 
