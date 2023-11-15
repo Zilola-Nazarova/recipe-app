@@ -2,7 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'shopping_lists/index', type: :view do
   before(:each) do
-    assign(:ingredients, { 'Apple' => [double('Ingredient', food: double('Food', name: 'Apple', measurement_unit: 'kg', price: 2.5))] })
+    assign(:ingredients,
+           { 'Apple' => [double('Ingredient',
+                                food: double('Food', name: 'Apple', measurement_unit: 'kg', price: 2.5))] })
     assign(:missing_numbers, { 'Apple' => 2 })
     assign(:total_price, 5.0)
 
