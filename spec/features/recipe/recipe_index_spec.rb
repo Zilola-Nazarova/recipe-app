@@ -68,7 +68,7 @@ RSpec.describe 'When I open user index page', type: :feature do
 
   context 'When I click on REMOVE button' do
     it 'removes this item' do
-      within first('.single_recipe') do
+      within first('.card') do
         click_button('REMOVE')
       end
       expect(page).to_not have_content('Greek Salad')
