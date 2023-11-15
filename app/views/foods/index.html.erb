@@ -7,6 +7,7 @@
     <tr>
       <th>Name</th>
       <th>Measurement Unit</th>
+      <th>Quantity</th>
       <th>Price</th>
       <th>Action</th>
     </tr>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= food.name %></td>
         <td><%= food.measurement_unit %></td>
+        <td><%= food.quantity %></td>
         <td><%= food.price %></td>
         <td>
           <%= button_to "Delete", food_path(food), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
