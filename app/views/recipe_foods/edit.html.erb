@@ -1,4 +1,4 @@
-<h1>Add new recipe food</h1>
+<h1>Edit Ingredient</h1>
 
 <% flash.each do |name, msg| -%>
   <%= content_tag :div, msg, class: name %>
@@ -8,5 +8,5 @@
     <%= form.label :quantity %>
     <%= form.number_field :quantity, min: 1,  required: true %>
     <%= form.collection_select :food_id, current_user.foods, :id, :name, { include_blank: false } %> 
-    <%= form.submit "Update ingredient" %>
+    <%= form.submit "Update" %>
 <% end %>
