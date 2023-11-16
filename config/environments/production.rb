@@ -112,7 +112,7 @@ Rails.application.configure do
     port:                 587,
     domain:               'gmail.com',
     user_name:            'recipeappcapstone@gmail.com',
-    password:             'recipe111app',
+    password:             'aouuaybaovtchnus',
     authentication:       'plain',
     enable_starttls_auto: true  }
 end
