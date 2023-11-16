@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '3.2.2'
 gem 'cancancan'
 # gem 'mailcatcher'
-
+gem 'devise', '~> 4.9'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.1.2'
 gem 'rubocop', '>= 1.0', '< 2.0'
@@ -74,5 +74,3 @@ group :test do
   gem 'database_cleaner'
   gem 'selenium-webdriver'
 end
-
-gem 'devise', '~> 4.9'
