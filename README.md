@@ -71,7 +71,7 @@ The **Recipe app** keeps track of all your recipes, ingredients, and inventory. 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- The Live Demo will be added after completing next projects for this app.
+- The Live Demo: https://recipe-app-mii4.onrender.com/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -188,15 +188,6 @@ If you like this project just star it!
 We would like to thank the Microverse program for the knowledge and skills we have acquired in Modules 1-5.
 
 We are grateful to all previous project reviewers for their advice. Thanks to them we could build this app.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-- **Why is there no Live Demo link?**
-
-  - This is a student project and the Live Demo will be added after reaching the corresponding phase of the project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
